@@ -1,3 +1,4 @@
+package calculatrice;
 
 public class Application {
 
@@ -5,5 +6,8 @@ public class Application {
 		// TODO Auto-generated method stub
 		System.out.println("hello momo");
 	}
-
+	
+	public static int add(int a, int b) {
+        return a + b;
+    }
 }
