@@ -24,7 +24,7 @@ public class TestConstantes {
     public void testADD_KEY() {
         result = Constantes.ADD_KEY;
         System.out.println(result);
-        Assert.assertEquals("addition", result);
+        Assert.assertEquals("+", result);
        
     }
     
@@ -46,21 +46,21 @@ public class TestConstantes {
     public void testSUB_KEY() {
         result = Constantes.SUB_KEY;
         System.out.println(result);
-        Assert.assertEquals("soustraction", result);
+        Assert.assertEquals("-", result);
        
     }
     @Test
     public void testDIVIDE_KEY() {
         result = Constantes.DIVIDE_KEY;
         System.out.println(result);
-        Assert.assertEquals("division", result);
+        Assert.assertEquals("/", result);
        
     }
     @Test
     public void testMUL_KEY() {
         result = Constantes.MUL_KEY;
         System.out.println(result);
-        Assert.assertEquals("multiplication", result);
+        Assert.assertEquals("*", result);
        
     }
 }
