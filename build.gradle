@@ -31,10 +31,16 @@ jacoco {
     toolVersion = "0.8.3"
 }
 
+<<<<<<< HEAD
 tasks.withType(Checkstyle) {
     reports {
         xml.enabled true
         html.enabled true
         html.stylesheet resources.text.fromFile('config/checkstyle/rules.xsl')
     }
+=======
+checkstyle {
+  toolVersion = "6.16.1"
+  config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
+>>>>>>> branch 'master' of https://github.com/nukten/calculatrice.git
 }
