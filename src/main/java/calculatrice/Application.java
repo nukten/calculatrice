@@ -13,8 +13,10 @@ public class Application {
 		boolean estCalculable = true;
 
 		do {
-			System.out.println("L'opération + ? ou q pour quitter ! ");
+			System.out.println("L'opï¿½ration + ? ou q pour quitter ! ");
 			String operation = sc.nextLine();
+			
+			//
 
 			if (operation != Constantes.QUIT_APPLI) {
 				System.out.println("Valeur 1 : ");
@@ -30,17 +32,17 @@ public class Application {
 						resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
 						break;
 					default:
-						resultat = "Operation non trouvée";
+						resultat = "Operation non trouvï¿½e";
 						break;
 					}
-					System.out.println("Le résultat est : ");
+					System.out.println("Le rï¿½sultat est : ");
 					System.out.println(resultat);
 				} else {
 					System.out.println("erreur dans la saisie");
 				}
 				System.out.println("----------------------------------------------------------------");
 			} else {
-				System.out.println("Arrêt de la calculatrice");
+				System.out.println("Arrï¿½t de la calculatrice");
 				System.exit(0);
 			}
 		} while (estCalculable);
