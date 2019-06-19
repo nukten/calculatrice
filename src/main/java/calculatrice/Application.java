@@ -65,5 +65,14 @@ public class Application {
 		} while (estCalculable);
 
 	}
+	/*
+	 * 
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled true
+        html.enabled true
+        html.stylesheet resources.text.fromFile('config/checkstyle/rules.xsl')
+ }
+	 */
 
 }

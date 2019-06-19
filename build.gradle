@@ -32,12 +32,6 @@ jacoco {
 }
 
 
-tasks.withType(Checkstyle) {
-    reports {
-        xml.enabled true
-        html.enabled true
-        html.stylesheet resources.text.fromFile('config/checkstyle/rules.xsl')
-    }
 
 checkstyle {
   toolVersion = "6.16.1"
