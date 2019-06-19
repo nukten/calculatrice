@@ -37,4 +37,8 @@ checkstyle {
   config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
 }
 
+javadoc {
+	source = sourceSets.main.allJava
+}
+
 
