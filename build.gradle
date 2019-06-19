@@ -10,7 +10,7 @@
 apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'jacoco'
-apply plugin: 'checkstyle'
+
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -32,8 +32,3 @@ jacoco {
 }
 
 
-
-checkstyle {
-  toolVersion = "6.16.1"
-  config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
-}
