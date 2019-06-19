@@ -8,15 +8,18 @@ public static final String EMPTY = "";
 	public static final String FLOAT_SEPARATOR = ".";
 	
 	/** The key for addition operation. */
-	public static final String ADD_KEY = "addition";
+	public static final String ADD_KEY = "+";
 
 	/** The key for subtraction operation. */
-	public static final String SUB_KEY = "soustraction";
+	public static final String SUB_KEY = "-";
 
 	/** The key for division operation. */
-	public static final String DIVIDE_KEY = "division";
-
+	public static final String DIVIDE_KEY = "/";
+ 
 	/** The key for multiplication operation. */
-	public static final String MUL_KEY = "multiplication";
+	public static final String MUL_KEY = "*";
+	
+	/** The key for quit operation. */
+	public static final String QUIT_APPLI = "q";
 
 }
