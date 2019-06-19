@@ -11,7 +11,7 @@ public class Calculatrice implements ICalculatrice {
 		float l_premiereValeur = Float.valueOf(a_premiereValeur);
 		float l_deuxiemeValeur = Float.valueOf(a_deuxiemeValeur);
 		return String.valueOf(l_premiereValeur + l_deuxiemeValeur);
-		//return null;
+		
 	}
 
 	/**

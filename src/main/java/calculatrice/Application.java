@@ -23,8 +23,8 @@ public class Application {
 			
 			String resultat = Constantes.EMPTY;
 			
-			
-			
+			if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty())
+			{
 					switch (operation) {
 					case Constantes.ADD_KEY:
 						resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
@@ -32,13 +32,14 @@ public class Application {
 					default:
 						resultat = "Operation non trouvé";
 						break;
-					}
+			}
 			
 			
 			System.out.println("Le résultat est : ");
 			System.out.println(resultat);
 
-			
+			}
+			else System.out.println("erreur dans la saisie");
 			System.out.println("----------------------------------------------------------------");
 
 	
