@@ -9,7 +9,6 @@
 // Apply the java-library plugin to add support for Java Library test
 apply plugin: 'eclipse'
 apply plugin: 'java'
-apply plugin: 'checkstyle'
 apply plugin: 'jacoco'
 
 // In this section you declare where to find the dependencies of your project
