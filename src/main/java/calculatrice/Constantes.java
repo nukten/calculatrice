@@ -21,5 +21,6 @@ public static final String EMPTY = "";
 	
 	/** The key for quit operation. */
 	public static final String QUIT_APPLI = "q";
+	
 
 }

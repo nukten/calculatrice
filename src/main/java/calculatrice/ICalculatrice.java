@@ -10,6 +10,7 @@ public interface ICalculatrice {
 	 * @return The sum of the two values
 	 */
 	public String addition(String premiereValeur, String deuxiemeValeur);
+	public String soustraction(String premiereValeur, String deuxiemeValeur);
 	
 	/**
 	 * Do a division.
@@ -36,7 +37,6 @@ public interface ICalculatrice {
 	 * @param pSecondValue The second value
 	 * @return The subtract of the second value from the first one
 	 */
-//	public String soustraction(String premiereValeur, String deuxiemeValeur);
 	
 
 }
