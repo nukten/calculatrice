@@ -3,13 +3,21 @@ package calculatrice;
 public interface ICalculatrice {
 	
 	/**
-	 * Do an addition.
+	 * Fait l'addition.
 	 * 
-	 * @param pFirstValue The first value
-	 * @param pSecondValue The second value
-	 * @return The sum of the two values
+	 * @param premiereValeur La première valeur
+	 * @param deuxiemeValeur La deuxième valeur
+	 * @return la somme entre les deux valeurs
 	 */
 	public String addition(String premiereValeur, String deuxiemeValeur);
+	
+	/**
+	 * Fait la soustraction.
+	 * 
+	 * @param premiereValeur La première valeur
+	 * @param deuxiemeValeur La deuxième valeur
+	 * @return la soustraction entre les deux valeurs
+	 */
 	public String soustraction(String premiereValeur, String deuxiemeValeur);
 	
 	/**
