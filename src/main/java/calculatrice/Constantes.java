@@ -10,7 +10,7 @@ public static final String EMPTY = "";
 	/** The key for addition operation. */
 	public static final String ADD_KEY = "+";
 
-	/** The key for subtraction operation. */
+	/** The key for subtraction operation. */ 
 	public static final String SUB_KEY = "-";
 
 	/** The key for division operation. */
