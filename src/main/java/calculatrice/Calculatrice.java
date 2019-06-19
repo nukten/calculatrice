@@ -8,9 +8,14 @@ public class Calculatrice implements ICalculatrice {
 	 */
 	@Override
 	public String addition(String a_premiereValeur, String a_deuxiemeValeur) {
-		float l_premiereValeur = Float.valueOf(a_premiereValeur);
-		float l_deuxiemeValeur = Float.valueOf(a_deuxiemeValeur);
-		return String.valueOf(l_premiereValeur + l_deuxiemeValeur);
+		
+		if (a_premiereValeur instanceof String | a_deuxiemeValeur instanceof String)
+		{
+			float l_premiereValeur = Float.valueOf(a_premiereValeur);
+			float l_deuxiemeValeur = Float.valueOf(a_deuxiemeValeur);
+			return String.valueOf(l_premiereValeur + l_deuxiemeValeur);
+		}
+		else return "Erreur";
 		
 	}
 
