@@ -10,8 +10,8 @@ public class Calculatrice implements ICalculatrice {
 	public String addition(String a_premiereValeur, String a_deuxiemeValeur) {
 		float l_premiereValeur = Float.valueOf(a_premiereValeur);
 		float l_deuxiemeValeur = Float.valueOf(a_deuxiemeValeur);
-		//return String.valueOf(l_premiereValeur + l_deuxièmeValeur);
-		return null;
+		return String.valueOf(l_premiereValeur + l_deuxiemeValeur);
+		//return null;
 	}
 
 	/**
