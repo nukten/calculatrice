@@ -16,14 +16,19 @@ public class Application {
 			System.out.println("L'op�ration + ? ou q pour quitter ! ");
 			String operation = sc.nextLine();
 			
-			//
-
-			if (operation != Constantes.QUIT_APPLI) {
+			switch(operation) {
+			case Constantes.QUIT_APPLI:
+				System.out.println("Arr�t de la calculatrice");
+				System.exit(0);
+				break;
+			
+			case "+":
 				System.out.println("Valeur 1 : ");
 				String premiereValeur = sc.nextLine(); 
 				System.out.println("Valeur 2: ");
 				String deuxiemeValeur = sc.nextLine();
-
+				
+				
 				String resultat = Constantes.EMPTY;
 
 				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
@@ -40,11 +45,14 @@ public class Application {
 				} else {
 					System.out.println("erreur dans la saisie");
 				}
-				System.out.println("----------------------------------------------------------------");
-			} else {
-				System.out.println("Arr�t de la calculatrice");
-				System.exit(0);
+				break;
+			default:
+				System.out.println("opération non disponible");
+				break;
+				
 			}
+			
+		
 		} while (estCalculable);
 
 	}
