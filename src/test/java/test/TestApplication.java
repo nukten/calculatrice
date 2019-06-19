@@ -17,6 +17,7 @@ public class TestApplication {
 		public void initialisation() {
 		montest =  new Calculatrice();
 		result = null;	
+		//test
 	}
 	
 	@Test
