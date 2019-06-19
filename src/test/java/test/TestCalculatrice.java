@@ -8,7 +8,7 @@ import calculatrice.Application;
 import calculatrice.Calculatrice;
 import calculatrice.ICalculatrice;
 
-public class TestApplication {
+public class TestCalculatrice {
 	
 	public static ICalculatrice montest;
 	public static String result;
