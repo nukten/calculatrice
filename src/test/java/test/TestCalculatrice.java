@@ -14,33 +14,38 @@ public class TestCalculatrice {
     public static String result;
     
     @Before
-    public void initialisation() {
+        public void initialisation() {
         montest =  new Calculatrice();
         result = null;
         //test
     }
     
     @Test
-    public void testAddition() {
-        result = montest.addition("5", "2");
-        System.out.println(result);
-        Assert.assertEquals("7.0", result);
+       public void testAddition() {
+        
+        
+       result = montest.addition("5", "2");
+       Assert.assertEquals("7.0", result);
        
     }
     
     
     @Test
-    public void testAddition1() {
+       public void testAddition1() {
+        
         result = montest.addition("0", "0");
         Assert.assertEquals("0.0", result);
     }
     
     
     @Test
-    public void testAddition2() {
-        result = montest.addition("-3", "4");
-        Assert.assertEquals("Erreur", result);
+       public void testAddition2() {
+        
+         result = montest.addition("-3", "4");
+         Assert.assertEquals("Erreur", result);
+         
     }
+    
+    
+
 }
-
-
