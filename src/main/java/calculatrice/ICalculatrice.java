@@ -18,7 +18,7 @@ public interface ICalculatrice {
 	 * @param pSecondValue The second value
 	 * @return The division of the first value by the second
 	 */
-	public String division(String premiereValeur, String deuxiemeValeur);
+/*	public String division(String premiereValeur, String deuxiemeValeur);
 	
 	/**
 	 * Do a multiplication.
@@ -27,7 +27,7 @@ public interface ICalculatrice {
 	 * @param pSecondValue The second value
 	 * @return The multiplication of the two values
 	 */
-	public String multiplication(String premiereValeur, String deuxiemeValeur);
+/*	public String multiplication(String premiereValeur, String deuxiemeValeur);
 	
 	/**
 	 * Do a subtraction.
@@ -36,7 +36,7 @@ public interface ICalculatrice {
 	 * @param pSecondValue The second value
 	 * @return The subtract of the second value from the first one
 	 */
-	public String soustraction(String premiereValeur, String deuxiemeValeur);
+//	public String soustraction(String premiereValeur, String deuxiemeValeur);
 	
 
 }

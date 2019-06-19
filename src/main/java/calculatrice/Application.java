@@ -7,40 +7,42 @@ public class Application {
 
 	public static void main(String[] args) {
 		
+		
 		ICalculatrice vCalculator =  new Calculatrice();
 		
-		// Now interact with user!
 		Scanner sc = new Scanner(System.in);
-		//while(true) {
+		
 			System.out.println("Valeur 1 : ");
 			String premiereValeur = sc.nextLine();
 			
 			System.out.println("Valeur 2: ");
 			String deuxiemeValeur = sc.nextLine();
 			
-			System.out.println("L'opération (addition ) ? ");
-			String vOperationKey = sc.nextLine();
+			System.out.println("L'opération (addition) ? ");
+			String operation = sc.nextLine();
 			
 			String resultat = Constantes.EMPTY;
 			
-			switch (vOperationKey) {
-			case Constantes.ADD_KEY:
-				resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
-				break;
-			default:
-				resultat = "Operation not found";
-				break;
-		}
+			if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty())
+			{
+					switch (operation) {
+					case Constantes.ADD_KEY:
+						resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
+						break;
+					default:
+						resultat = "Operation non trouvé";
+						break;
+			}
 			
-			// Do the operation and show results
+			
 			System.out.println("Le résultat est : ");
 			System.out.println(resultat);
-			
-			sc.nextLine();
-			
+
+			}
+			else System.out.println("erreur dans la saisie");
 			System.out.println("----------------------------------------------------------------");
 
-		//}
+	
 	}
 	
 	
