@@ -12,7 +12,7 @@ public class Calculatrice implements ICalculatrice {
 			if (l_premiereValeur >= 0 & l_deuxiemeValeur >= 0) {
 				return String.valueOf(l_premiereValeur + l_deuxiemeValeur);
 			} else {
-				return "Erreur : Un nombre est inf�rieur � 0.";
+				return "Erreur : Un nombre est inférieur à 0.";
 			}
 		} catch (NumberFormatException e) {
 			return "Erreur : Une des saisies n'a pas le type attendu.";
