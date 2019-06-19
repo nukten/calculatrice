@@ -37,8 +37,7 @@ public class Application {
 			
 			System.out.println("Le résultat est : ");
 			System.out.println(resultat);
-			
-			sc.nextLine();
+
 			
 			System.out.println("----------------------------------------------------------------");
 
