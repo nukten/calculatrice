@@ -36,7 +36,8 @@ public class TestCalculatrice {
     @Test
     public void testAddition2() {
          result = montest.addition("-3", "4");
-         System.out.println(result);
+         Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0.");
+         
     }
 
     @Test
@@ -54,10 +55,8 @@ public class TestCalculatrice {
 
 @Test
     public void testSoustraction2() {
-    
     result = montest.soustraction("-3", "4");
-    Assert.assertEquals(result, result);
-
+    Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0."); 
     }
 
 }
