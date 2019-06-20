@@ -44,4 +44,9 @@ options.addStringOption('encoding', 'UTF-8')
 options.addStringOption('charSet', 'UTF-8')
 }
 
+pmd {
+    toolVersion = '5.1.3'
+    ruleSets = ["empty"]
+}
+
 
