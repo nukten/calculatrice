@@ -3,8 +3,8 @@ package calculatrice;
 import java.util.Scanner;
 
 public class Application {
-	/*
-	 * 
+	/**
+	 * Fonction de démarrage du programme
 	 */
     public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class Application {
 		String deuxiemeValeur = null;
 		String resultat = null;
 
-		do { 
+		do {
 			System.out.println("Choissisez l'opÃ©ration (+/-/*) ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
