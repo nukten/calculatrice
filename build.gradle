@@ -47,6 +47,6 @@ options.addStringOption('charSet', 'UTF-8')
 pmd {
     toolVersion = '5.1.3'
 	ruleSetConfig = rootProject.resources.text.fromFile('config/pmd/ruleset.xml')
-	ignoreFailure = true
+	ignoreFailures = true
 }
 
