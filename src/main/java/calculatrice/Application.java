@@ -15,7 +15,7 @@ public class Application {
 		String deuxiemeValeur = null;
 		String resultat = null;
 
-		do { 
+		do {
 			System.out.println("Choissisez l'opération (+/-/*) ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
