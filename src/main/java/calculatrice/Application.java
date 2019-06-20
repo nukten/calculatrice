@@ -3,8 +3,10 @@ package calculatrice;
 import java.util.Scanner;
 
 public class Application {
-
-	public static void main(String[] args) {
+	/*
+	 * 
+	 */
+    public static void main(String[] args) {
 
 		ICalculatrice vCalculator = new Calculatrice();
 		Scanner sc = new Scanner(System.in);
@@ -13,7 +15,7 @@ public class Application {
 		String deuxiemeValeur = null;
 		String resultat = null;
 
-		do { //
+		do { 
 			System.out.println("Choissisez l'opération (+/-/*) ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
