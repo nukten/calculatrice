@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Application {
 	/**
-	 * Fonction de démarrage du programme
+	 * Fonction de demarrage du programme
 	 */
     public static void main(String[] args) {
 
@@ -23,7 +23,7 @@ public class Application {
 			premiereValeur = null;
 			deuxiemeValeur = null;
 			resultat = null;
-			System.out.println("Choissisez l'opÃ©ration (+/-/*) ou q pour quitter ! ");
+			System.out.println("Choissisez l'operation (+/-/*) ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
 			switch (operation) {
@@ -90,7 +90,7 @@ public class Application {
 				break;
 
 			default:
-				System.out.println("opération non disponible");
+				System.out.println("operation non disponible");
 				break;
 
 			}
