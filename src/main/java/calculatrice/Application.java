@@ -1,5 +1,6 @@
 package calculatrice;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
@@ -9,13 +10,19 @@ public class Application {
     public static void main(String[] args) {
 
 		ICalculatrice vCalculator = new Calculatrice();
+		ArrayList<String> HistoList = new ArrayList<String>();
 		Scanner sc = new Scanner(System.in);
 		boolean estCalculable = true;
 		String premiereValeur = null;
 		String deuxiemeValeur = null;
 		String resultat = null;
+		String calcul = null;
 
 		do {
+			calcul = null;
+			premiereValeur = null;
+			deuxiemeValeur = null;
+			resultat = null;
 			System.out.println("Choissisez l'opération (+/-/*) ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
@@ -57,6 +64,15 @@ public class Application {
 					System.out.println("erreur dans la saisie");
 				}
 
+			case Constantes.HISTO:
+				if(HistoList.size() > 0) {
+					for(int i = 0; i < HistoList.size(); i++) {
+						System.out.println(HistoList.get(i));
+					}
+				}else {
+					System.out.println("La liste est vide");
+				}
+				break;
 			case Constantes.MUL_KEY:
 				System.out.println("Valeur 1 : ");
 				premiereValeur = sc.nextLine();
@@ -74,11 +90,14 @@ public class Application {
 				break;
 
 			default:
-				System.out.println("opération non disponible");
+				System.out.println("op�ration non disponible");
 				break;
 
 			}
-
+			calcul = premiereValeur + " " + operation + " " + deuxiemeValeur + " = "+resultat;
+			if( (calcul != null) & (operation != null) & (premiereValeur != null) & (deuxiemeValeur != null) ) {
+				HistoList.add(calcul);
+			}
 		} while (estCalculable);
 
 	}
