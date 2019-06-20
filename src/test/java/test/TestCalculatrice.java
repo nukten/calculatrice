@@ -56,7 +56,7 @@ public class TestCalculatrice {
 @Test
     public void testSoustraction2() {
     result = montest.soustraction("-3", "4");
-    Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0.");
+    Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0."); 
     }
 
 }
