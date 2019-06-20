@@ -3,8 +3,8 @@ package calculatrice;
 import java.util.Scanner;
 
 public class Application {
-	/*
-	 * 
+	/**
+	 * Fonction de démarrage du programme
 	 */
     public static void main(String[] args) {
 
