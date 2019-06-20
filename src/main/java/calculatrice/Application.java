@@ -14,7 +14,7 @@ public class Application {
 		String resultat = null;
 
 		do {
-			System.out.println("L'opération + ? ou - ? ou q pour quitter ! ");
+			System.out.println("Choissisez l'opération (+/-/*) ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
 			switch (operation) {
@@ -55,7 +55,22 @@ public class Application {
 					System.out.println("erreur dans la saisie");
 				}
 
+			case Constantes.MUL_KEY:
+				System.out.println("Valeur 1 : ");
+				premiereValeur = sc.nextLine();
+				System.out.println("Valeur 2: ");
+				deuxiemeValeur = sc.nextLine();
+				resultat = Constantes.EMPTY;
+
+				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
+					resultat = vCalculator.multiplication(premiereValeur, deuxiemeValeur);
+					System.out.println("Le résultat est : ");
+					System.out.println(resultat);
+				} else {
+					System.out.println("erreur dans la saisie");
+				}
 				break;
+
 			default:
 				System.out.println("opération non disponible");
 				break;
@@ -65,14 +80,4 @@ public class Application {
 		} while (estCalculable);
 
 	}
-	/*
-	 * 
-tasks.withType(Checkstyle) {
-    reports {
-        xml.enabled true
-        html.enabled true
-        html.stylesheet resources.text.fromFile('config/checkstyle/rules.xsl')
- }
-	 */
-
 }

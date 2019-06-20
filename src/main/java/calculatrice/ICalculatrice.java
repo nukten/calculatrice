@@ -21,30 +21,24 @@ public interface ICalculatrice {
 	public String soustraction(String premiereValeur, String deuxiemeValeur);
 	
 	/**
+	 * Fait la multiplication.
+	 * @param premiereValeur La première valeur
+	 * @param deuxiemeValeur La deuxième valeur
+	 * @return la multiplication entre les deux valeurs
+	 */
+	public String multiplication(String premiereValeur, String deuxiemeValeur);
+	
+	
+/*	/**
 	 * Do a division.
 	 * 
 	 * @param pFirstValue The first value
 	 * @param pSecondValue The second value
 	 * @return The division of the first value by the second
 	 */
-/*	public String division(String premiereValeur, String deuxiemeValeur);
+//	public String division(String premiereValeur, String deuxiemeValeur);
 	
-	/**
-	 * Do a multiplication.
-	 * 
-	 * @param pFirstValue The first value
-	 * @param pSecondValue The second value
-	 * @return The multiplication of the two values
-	 */
-/*	public String multiplication(String premiereValeur, String deuxiemeValeur);
-	
-	/**
-	 * Do a subtraction.
-	 * 
-	 * @param pFirstValue The first value
-	 * @param pSecondValue The second value
-	 * @return The subtract of the second value from the first one
-	 */
+
 	
 
 }
