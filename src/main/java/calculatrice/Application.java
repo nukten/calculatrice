@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Application {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
 		ICalculatrice vCalculator = new Calculatrice();
 		Scanner sc = new Scanner(System.in);
