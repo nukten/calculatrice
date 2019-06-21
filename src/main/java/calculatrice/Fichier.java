@@ -26,7 +26,7 @@ public class Fichier {
             FileWriter fichier = new FileWriter(file);
             if (l_histoList.size() > 0) {
                 for (int i = 0; i < l_histoList.size(); i++) {
-                    l_chaine += l_histoList.get(i)+"\n";
+                    l_chaine += l_histoList.get(i) + "\n";
                 }
 
                 Files.write(Paths.get("./monFichier.txt"),l_chaine.getBytes(), StandardOpenOption.APPEND);
@@ -42,18 +42,18 @@ public class Fichier {
     }
 
     void lecture() {
-           try {
-                  FileInputStream fis = new FileInputStream(file);
-                  InputStreamReader  lecture = new InputStreamReader(fis);
-                  BufferedReader buff = new BufferedReader(lecture);
-                  String ligne;
-                  while ((ligne = buff.readLine()) != null){
-                      System.out.println(ligne);
-                  }
-                  buff.close();
-                } catch (IOException exp) {
-                    exp.printStackTrace();
-                }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            InputStreamReader  lecture = new InputStreamReader(fis);
+            BufferedReader buff = new BufferedReader(lecture);
+            String ligne;
+            while ((ligne = buff.readLine()) != null) {
+                System.out.println(ligne);
+            }
+            buff.close();
+            } catch (IOException exp) {
+                exp.printStackTrace();
+            }
     }
 
     void ecritureApplication(ArrayList<String> l_histoList) {

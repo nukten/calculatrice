@@ -40,8 +40,8 @@ checkstyle {
 }
 
 tasks.withType(Checkstyle) {
-	exclude '**/Test*.java'
-	exclude '**/InputHelper.java'
+    exclude '**/Test*.java'
+    exclude '**/InputHelper.java'
 }
 
 tasks.withType(Javadoc) {
@@ -73,5 +73,3 @@ check << {
         }
     }
 }
-
-

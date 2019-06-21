@@ -28,17 +28,4 @@ public interface ICalculatrice {
      */
     public String multiplication(String premiereValeur, String deuxiemeValeur);
 
-
-    /* /**
-     * Do a division.
-     *
-     * @param pFirstValue The first value
-     * @param pSecondValue The second value
-     * @return The division of the first value by the second
-     */
-    //public String division(String premiereValeur, String deuxiemeValeur);
-
-
-
-
 }
