@@ -12,6 +12,7 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
+apply plugin: 'cpd'
 //apply plugin: 'jdepend'
 
 
@@ -29,6 +30,7 @@ dependencies {
     implementation 'com.google.guava:guava:23.0'
 
     // Use JUnit test framework
+	classpath 'de.aaschmid.gradle.plugins:gradle-cpd-plugin:0.1'
     testImplementation 'junit:junit:4.12'
 }
 jacoco {
@@ -51,15 +53,13 @@ pmd {
 	ignoreFailures = true
 }
 
-cpd {
-  File outDir = new File('build/reports/pmd/')
-  outDir.mkdirs()
-  ant.taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask',
-    classpath: configurations.pmd.asPath)
-  ant.cpd(minimumTokenCount: '100', format: 'xml',
-    outputFile: new File(outDir , 'cpd.xml')) {
-    fileset(dir: "src/main/java") {
-      include(name: '**/*.java')
+
+tasks.cpd {
+    reports {
+        text.enabled = true
+        xml.enabled = false
     }
-  }
+    source = files('src/main/java')
 }
+
+
