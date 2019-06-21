@@ -52,6 +52,14 @@ pmd {
 }
 
 cpd {
-    language = 'cpp'
-    toolVersion = '6.1.0' // defaults to '6.13.0'; just available for v6.1.0 and higher (see explanation above)
+  File outDir = new File('build/reports/pmd/')
+  outDir.mkdirs()
+  ant.taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask',
+    classpath: configurations.pmd.asPath)
+  ant.cpd(minimumTokenCount: '100', format: 'xml',
+    outputFile: new File(outDir , 'cpd.xml')) {
+    fileset(dir: "src/main/java") {
+      include(name: '**/*.java')
+    }
+  }
 }
