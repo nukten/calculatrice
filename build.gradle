@@ -12,6 +12,7 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
+apply plugin: 'de.aaschmid.cpd'
 //apply plugin: 'jdepend'
 
 
@@ -52,14 +53,6 @@ pmd {
 }
 
 cpd {
-    toolVersion = '5.1.3'
+    language = 'cpp'
+    toolVersion = '6.1.0' // defaults to '6.13.0'; just available for v6.1.0 and higher (see explanation above)
 }
-
-tasks.cpd {
-    reports {
-        text.enabled = true
-        xml.enabled = true
-    }
-    source = files('src') 
-}
-
