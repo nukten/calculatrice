@@ -37,14 +37,11 @@ jacoco {
 checkstyle {
   toolVersion = "6.16.1"
   config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
- // checkstyleTest.exclude '**/Test*.java'
- // exclude '**/InputHelper.java'
-
-
 }
 
 tasks.withType(Checkstyle) {
 	exclude '**/Test*.java'
+	exclude '**/InputHelper.java'
 }
 
 tasks.withType(Javadoc) {
