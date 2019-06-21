@@ -37,28 +37,11 @@ jacoco {
 checkstyle {
   toolVersion = "6.16.1"
   config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
-<<<<<<< HEAD
-<<<<<<< HEAD
-  exclude "**/Test*.java"
-  exclude "**/InputHelper.java"
 }
-checkstyleTest {
-   sourceSets = []
-=======
-  exclude '**/Test*.java'
-  exclude '**/InputHelper.java'
-=======
-}
->>>>>>> branch 'master' of https://github.com/nukten/calculatrice.git
 
-<<<<<<< HEAD
-
->>>>>>> branch 'master' of https://github.com/nukten/calculatrice.git
-=======
 tasks.withType(Checkstyle) {
-	exclude '**/Test*.java'
-	exclude '**/InputHelper.java'
->>>>>>> branch 'master' of https://github.com/nukten/calculatrice.git
+    exclude '**/Test*.java'
+    exclude '**/InputHelper.java'
 }
 
 tasks.withType(Javadoc) {
@@ -89,5 +72,3 @@ check << {
         }
     }
 }
-
-
