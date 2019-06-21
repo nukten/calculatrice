@@ -3,8 +3,8 @@ package calculatrice;
 public class Calculatrice implements ICalculatrice {
     /**
      * Méthode qui permet l'addition de deux nombres
-     * @param a_premiereValeur La première valeur
-     * @param a_deuxiemeValeur La deuxième valeur
+     * @param aPremiereValeur La première valeur
+     * @param aDeuxiemeValeur La deuxième valeur
      * @return l'addition entre les deux paramétres
      */
     @Override
@@ -24,8 +24,8 @@ public class Calculatrice implements ICalculatrice {
 
     /**
      * Méthode qui permet la soustraction de deux nombres
-     * @param a_premiereValeur La première valeur
-     * @param a_deuxiemeValeur La deuxième valeur
+     * @param aPremiereValeur La première valeur
+     * @param aDeuxiemeValeur La deuxième valeur
      * @return la soustraction entre les deux paramétres
      */
     @Override
@@ -46,8 +46,8 @@ public class Calculatrice implements ICalculatrice {
 
     /**
      * Méthode qui permet la multiplication de deux nombres
-     * @param a_premiereValeur La première valeur
-     * @param a_deuxiemeValeur La deuxième valeur
+     * @param aPremiereValeur La première valeur
+     * @param aDeuxiemeValeur La deuxième valeur
      * @return la multiplication entre les deux paramétres
      */
     @Override
@@ -67,29 +67,29 @@ public class Calculatrice implements ICalculatrice {
 
     /**
      * Méthode qui permet la realisation du calcul
-     * @param a_premiereValeur La première valeur
-     * @param a_deuxiemeValeur La deuxième valeur
-     * @param a_operateur operateur
+     * @param aPremiereValeur La première valeur
+     * @param aDeuxiemeValeur La deuxième valeur
+     * @param aoperateur operateur
      * @return le resultat
      */
     @Override
-    public String calcul(String aPremiereValeur, String aDeuxiemeValeur, String a_operateur) {
+    public String calcul(String apremierevaleur, String adeuxiemeValeur, String aoperateur) {
         String result = "Erreur sur l'operation";
         try {
-                switch(a_operateur){
-                    case Constantes.ADD_KEY:
-                        result = this.addition(aPremiereValeur, aDeuxiemeValeur);
-                        break;
-                    case Constantes.SUB_KEY:
-                        result = this.soustraction(aPremiereValeur, aDeuxiemeValeur);
-                        break;
-                    case Constantes.MUL_KEY:
-                        result = this.multiplication(aPremiereValeur, aDeuxiemeValeur);
-                        break;
-                    default:
-                        result = "Erreur sur l'operation";
-                        break;
-                }
+            switch (aoperateur) {
+                case Constantes.ADD_KEY:
+                    result = this.addition(apremierevaleur, adeuxiemeValeur);
+                    break;
+                case Constantes.SUB_KEY:
+                    result = this.soustraction(apremierevaleur, adeuxiemeValeur);
+                    break;
+                case Constantes.MUL_KEY:
+                    result = this.multiplication(apremierevaleur, adeuxiemeValeur);
+                    break;
+                default:
+                    result = "Erreur sur l'operation";
+                    break;
+            }
         } catch (NumberFormatException exp) {
             result = "Erreur : Une des saisies n'a pas le type attendu.";
         }
