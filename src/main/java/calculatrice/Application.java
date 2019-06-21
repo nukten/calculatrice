@@ -10,7 +10,7 @@ public class Application {
      */
     public static void main(String[] args) {
 
-        ICalculatrice vCalculator = new Calculatrice();
+        ICalculatrice vcalculator = new Calculatrice();
         ArrayList<String> histoList = new ArrayList<String>();
         Scanner sc = new Scanner(System.in);
         boolean estCalculable = true;
@@ -25,7 +25,7 @@ public class Application {
             premiereValeur = null;
             deuxiemeValeur = null;
             resultat = null;
-            System.out.println("Choissisez l'opération (+/-/*)"+"\n"+"p et votre signe opératoire pour utiliser le résultat précédent"+"\n"+"h pour l'historique"+"\n"+"q pour quitter");
+            System.out.println("Choissisez l'opération (+/-/*)" + "\n" + "p et votre signe opératoire pour utiliser le résultat précédent" + "\n" + "h pour l'historique" + "\n" + "q pour quitter");
             System.out.println("\nNous vous souhaitons un bon moment dans l'utilisation de notre MagiCalto");
             String operation = sc.nextLine();
             String operation2 = new String();
@@ -47,7 +47,7 @@ public class Application {
                     resultat = Constantes.EMPTY;
 
                     if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
-                        resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
+                        resultat = vcalculator.addition(premiereValeur, deuxiemeValeur);
                         System.out.println("Le résultat est : ");
                         System.out.println(resultat);
                     } else {
@@ -63,7 +63,7 @@ public class Application {
                     resultat = Constantes.EMPTY;
 
                     if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
-                        resultat = vCalculator.soustraction(premiereValeur, deuxiemeValeur);
+                        resultat = vcalculator.soustraction(premiereValeur, deuxiemeValeur);
                         System.out.println("Le résultat est : ");
                         System.out.println(resultat);
                     } else {
@@ -83,7 +83,7 @@ public class Application {
                     resultat = Constantes.EMPTY;
 
                     if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
-                        resultat = vCalculator.multiplication(premiereValeur, deuxiemeValeur);
+                        resultat = vcalculator.multiplication(premiereValeur, deuxiemeValeur);
                         System.out.println("Le résultat est : ");
                         System.out.println(resultat);
                     } else {
@@ -109,23 +109,23 @@ public class Application {
                         if (operation2 != null) {
                             if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
                                 switch (operation2) {
-                                case Constantes.ADD_KEY:
-                                    resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
-                                    break;
-                                case Constantes.MUL_KEY:
-                                    resultat = vCalculator.multiplication(premiereValeur, deuxiemeValeur);
-                                    break;
-                                case Constantes.SUB_KEY:
-                                    resultat = vCalculator.soustraction(premiereValeur, deuxiemeValeur);
-                                    break;
-                                    default:
-                                        System.out.println("Erreur d'opérateur lors de la récupération du résultat précédent");
-                                        operation = null;
-                                        premiereValeur = null;
-                                        deuxiemeValeur = null;
-                                        resultat = null;
-                                        calcul = null;
-                                    break;
+                                    case Constantes.ADD_KEY:
+                                        resultat = vcalculator.addition(premiereValeur, deuxiemeValeur);
+                                        break;
+                                    case Constantes.MUL_KEY:
+                                        resultat = vcalculator.multiplication(premiereValeur, deuxiemeValeur);
+                                        break;
+                                    case Constantes.SUB_KEY:
+                                        resultat = vcalculator.soustraction(premiereValeur, deuxiemeValeur);
+                                        break;
+                                        default:
+                                            System.out.println("Erreur d'opérateur lors de la récupération du résultat précédent");
+                                            operation = null;
+                                            premiereValeur = null;
+                                            deuxiemeValeur = null;
+                                            resultat = null;
+                                            calcul = null;
+                                            break;
                                 }
                                 System.out.println("Le résultat est : ");
                                 System.out.println(resultat);
@@ -151,7 +151,7 @@ public class Application {
             }
             if (resultat != null) {
                 if (premiereValeur != null & operation != null & deuxiemeValeur != null & resultat != null) {
-                    calcul = premiereValeur + " " + operation + " " + deuxiemeValeur + " = "+resultat;
+                    calcul = premiereValeur + " " + operation + " " + deuxiemeValeur + " = " + resultat;
                 }
                 if ((calcul != null) & (operation != null & operation != Constantes.HISTO) & (premiereValeur != null) & (deuxiemeValeur != null) & (!resultat.contains(" "))) {
                     histoList.add(calcul);
