@@ -693,7 +693,7 @@ public class TestCalculatrice {
 
     @Test
     public void testOperation13() {
-        result = montest.calcul("1", "33", "-");
+        result = montest.calcul("1", "33", "---");
         Assert.assertEquals(result, "Erreur sur l'operation");
     }
 }
