@@ -15,7 +15,7 @@ public class Fichier {
 
 
     File file = new File("./monFichier.txt");
-    String l_chaine = new String();
+    String lChaine = new String();
 
     /**
      * Ecrit dans le fichier d'historique
@@ -26,10 +26,10 @@ public class Fichier {
             FileWriter fichier = new FileWriter(file);
             if (l_histoList.size() > 0) {
                 for (int i = 0; i < l_histoList.size(); i++) {
-                    l_chaine += l_histoList.get(i) + "\n";
+                	lChaine += l_histoList.get(i) + "\n";
                 }
 
-                Files.write(Paths.get("./monFichier.txt"),l_chaine.getBytes(), StandardOpenOption.APPEND);
+                Files.write(Paths.get("./monFichier.txt"),lChaine.getBytes(), StandardOpenOption.APPEND);
 
             } else {
                 System.out.println("La liste est vide");
@@ -56,10 +56,10 @@ public class Fichier {
             }
     }
 
-    void ecritureApplication(ArrayList<String> l_histoList) {
+    void ecritureApplication(ArrayList<String> lHistoList) {
         Fichier fichier = new Fichier();
         try {
-            fichier.writer(l_histoList);
+            fichier.writer(lHistoList);
         } catch (IOException exp) {
             exp.printStackTrace();
         }

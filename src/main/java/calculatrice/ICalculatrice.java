@@ -27,7 +27,7 @@ public interface ICalculatrice {
      * @return la multiplication entre les deux valeurs
      */
     public String multiplication(String premiereValeur, String deuxiemeValeur);
-    
+
     /**
      * Realise les calculs.
      * @param premiereValeur La première valeur

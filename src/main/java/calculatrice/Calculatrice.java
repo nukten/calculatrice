@@ -8,12 +8,12 @@ public class Calculatrice implements ICalculatrice {
      * @return l'addition entre les deux paramétres
      */
     @Override
-    public String addition(String a_premiereValeur, String a_deuxiemeValeur) {
+    public String addition(String aPremiereValeur, String aDeuxiemeValeur) {
         try {
-            float l_premiereValeur = Float.parseFloat(a_premiereValeur);
-            float l_deuxiemeValeur = Float.parseFloat(a_deuxiemeValeur);
-            if (l_premiereValeur >= 0 & l_deuxiemeValeur >= 0) {
-                return String.valueOf(l_premiereValeur + l_deuxiemeValeur);
+            float lPremiereValeur = Float.parseFloat(aPremiereValeur);
+            float lDeuxiemeValeur = Float.parseFloat(aDeuxiemeValeur);
+            if (lPremiereValeur >= 0 & lDeuxiemeValeur >= 0) {
+                return String.valueOf(lPremiereValeur + lDeuxiemeValeur);
             } else {
                 return "Erreur : Un nombre est inférieur à 0.";
             }
@@ -29,12 +29,12 @@ public class Calculatrice implements ICalculatrice {
      * @return la soustraction entre les deux paramétres
      */
     @Override
-    public String soustraction(String a_premiereValeur, String a_deuxiemeValeur) {
+    public String soustraction(String aPremiereValeur, String aDeuxiemeValeur) {
         try {
-            float l_premiereValeur = Float.valueOf(a_premiereValeur);
-            float l_deuxiemeValeur = Float.valueOf(a_deuxiemeValeur);
-            if (l_premiereValeur >= 0 & l_deuxiemeValeur >= 0) {
-                return String.valueOf(l_premiereValeur - l_deuxiemeValeur);
+            float lPremiereValeur = Float.valueOf(aPremiereValeur);
+            float lDeuxiemeValeur = Float.valueOf(aDeuxiemeValeur);
+            if (lPremiereValeur >= 0 & lDeuxiemeValeur >= 0) {
+                return String.valueOf(lPremiereValeur - lDeuxiemeValeur);
             } else {
                 return "Erreur : Un nombre est inférieur à 0.";
             }
@@ -51,12 +51,12 @@ public class Calculatrice implements ICalculatrice {
      * @return la multiplication entre les deux paramétres
      */
     @Override
-    public String multiplication(String a_premiereValeur, String a_deuxiemeValeur) {
+    public String multiplication(String aPremiereValeur, String aDeuxiemeValeur) {
         try {
-            float l_premiereValeur = Float.valueOf(a_premiereValeur);
-            float l_deuxiemeValeur = Float.valueOf(a_deuxiemeValeur);
-            if (l_premiereValeur >= 0 & l_deuxiemeValeur >= 0) {
-                return String.valueOf(l_premiereValeur * l_deuxiemeValeur);
+            float lPremiereValeur = Float.valueOf(aPremiereValeur);
+            float lDeuxiemeValeur = Float.valueOf(aDeuxiemeValeur);
+            if (lPremiereValeur >= 0 & lDeuxiemeValeur >= 0) {
+                return String.valueOf(lPremiereValeur * lDeuxiemeValeur);
             } else {
                 return "Erreur : Un nombre est inférieur à 0.";
             }
@@ -64,7 +64,7 @@ public class Calculatrice implements ICalculatrice {
             return "Erreur : Une des saisies n'a pas le type attendu.";
         }
     }
-    
+
     /**
      * Méthode qui permet la realisation du calcul
      * @param a_premiereValeur La première valeur
@@ -73,18 +73,18 @@ public class Calculatrice implements ICalculatrice {
      * @return le resultat
      */
     @Override
-    public String calcul(String a_premiereValeur, String a_deuxiemeValeur, String a_operateur) {
+    public String calcul(String aPremiereValeur, String aDeuxiemeValeur, String a_operateur) {
         String result = "Erreur sur l'operation";
         try {
                 switch(a_operateur){
                 case Constantes.ADD_KEY:
-                	result = this.addition(a_premiereValeur, a_deuxiemeValeur);
+                	result = this.addition(aPremiereValeur, aDeuxiemeValeur);
                 	break;
                 case Constantes.SUB_KEY:
-                	result = this.soustraction(a_premiereValeur, a_deuxiemeValeur);
+                	result = this.soustraction(aPremiereValeur, aDeuxiemeValeur);
                 	break;
                 case Constantes.MUL_KEY:
-                	result = this.multiplication(a_premiereValeur, a_deuxiemeValeur);
+                	result = this.multiplication(aPremiereValeur, aDeuxiemeValeur);
                 	break;
                 default:
                 	result = "Erreur sur l'operation";

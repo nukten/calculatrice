@@ -6,15 +6,28 @@ import java.util.Scanner;
 
 public class Application {
 
+	/** Valeur de la premiere saisie. */
     public static String premiereValeur = null;
+
+    /** Valeur de la deuxieme saisie. */
     public static String deuxiemeValeur = null;
+
+    /** Résultat de l'operation */
     public static String resultat = null;
+
+    /** Valeur du calcul saisie */
     public static String calcul = null;
+
+    /** Valeur de la premiere operation. */
     public static String operation = null;
+
+    /** Valeur de la deuxieme operation. */
     public static String operation2 = null;
+
+    /** Object pour recuperer la saisie clavier. */
     public static Scanner sc = null;
-    
-    
+
+
     /**
      * Fonction de démarrage du programme
      */
@@ -27,7 +40,9 @@ public class Application {
         sc = new Scanner(System.in);
         do {
         	initVariables ();
-            System.out.println("Choissisez l'opération (+/-/*)" + "\n" + "p et votre signe opératoire pour utiliser le résultat précédent" + "\n" + "h pour l'historique" + "\n" + "q pour quitter");
+            System.out.println("Choissisez l'opération (+/-/*)");
+            System.out.println("p et votre signe opératoire pour utiliser le résultat précédent");
+            System.out.println("h pour l'historique" + "\n" + "q pour quitter");
             System.out.println("\nNous vous souhaitons un bon moment dans l'utilisation de notre MagiCalto");
             String operation = inputChecker();
             String operation2 = new String();
@@ -112,14 +127,15 @@ public class Application {
             }
         } while (estCalculable);
     }
-    
+
     /**
      * Fonction de controle de saisie
+     * @return la saisie du clavier
      */
     public static String inputChecker() {
     	return sc.nextLine();
     }
-    
+
     /**
      * Fonction d'initialisation de variables
      */
