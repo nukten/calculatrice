@@ -10,18 +10,22 @@ import calculatrice.ICalculatrice;
 
 public class TestConstantes {
 
-    public static ICalculatrice montest;
     public static String result;
 
     @Before
+    /**
+     * Initialisation
+     */
     public void initialisation() {
-        montest =  new Calculatrice();
         result = null;
         //test
     }
 
     @Test
-    public void testADD_KEY() {
+    /**
+     * test de la constante ADD_KEY
+     */
+    public void testAdd_key() {
         result = Constantes.ADD_KEY;
         System.out.println(result);
         Assert.assertEquals("+", result);
@@ -29,35 +33,50 @@ public class TestConstantes {
     }
 
     @Test
-    public void testEMPTY() {
+    /**
+     * test de la constante EMPTY
+     */
+    public void testEmpty() {
         result = Constantes.EMPTY;
         System.out.println(result);
         Assert.assertEquals("", result);
 
     }
     @Test
-    public void testFLOAT_SEPARATOR() {
+    /**
+     * test de la constante FLOAT_SEPARATOR
+     */
+    public void testFloat_separator() {
         result = Constantes.FLOAT_SEPARATOR;
         System.out.println(result);
         Assert.assertEquals(".", result);
 
     }
     @Test
-    public void testSUB_KEY() {
+    /**
+     * test de la constante SUB_KEY
+     */
+    public void testSub_key() {
         result = Constantes.SUB_KEY;
         System.out.println(result);
         Assert.assertEquals("-", result);
 
     }
     @Test
-    public void testDIVIDE_KEY() {
+    /**
+     * test de la constante DIVIDE_KEY
+     */
+    public void testDivide_key() {
         result = Constantes.DIVIDE_KEY;
         System.out.println(result);
         Assert.assertEquals("/", result);
 
     }
     @Test
-    public void testMUL_KEY() {
+    /**
+     * test de la constante MUL_KEY
+     */
+    public void testMul_key() {
         result = Constantes.MUL_KEY;
         System.out.println(result);
         Assert.assertEquals("*", result);

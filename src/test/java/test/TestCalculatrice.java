@@ -14,6 +14,9 @@ public class TestCalculatrice {
     public static String result;
 
     @Before
+    /**
+     * Initialisation
+     */
     public void initialisation() {
         montest =  new Calculatrice();
         result = null;
