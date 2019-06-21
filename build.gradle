@@ -60,6 +60,6 @@ tasks.cpd {
         text.enabled = true
         xml.enabled = true
     }
-    source = files('src')
-}
-*/
+    source = files('src') 
+}*/
+
