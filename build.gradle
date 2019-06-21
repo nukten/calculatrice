@@ -39,8 +39,9 @@ checkstyle {
   config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
   exclude "**/Test*.java"
   exclude "**/InputHelper.java"
-
-
+}
+checkstyleTest {
+   sourceSets = []
 }
 
 tasks.withType(Javadoc) {
