@@ -64,6 +64,37 @@ public class Calculatrice implements ICalculatrice {
             return "Erreur : Une des saisies n'a pas le type attendu.";
         }
     }
+    
+    /**
+     * Méthode qui permet la realisation du calcul
+     * @param a_premiereValeur La première valeur
+     * @param a_deuxiemeValeur La deuxième valeur
+     * @param a_operateur operateur
+     * @return le resultat
+     */
+    @Override
+    public String calcul(String a_premiereValeur, String a_deuxiemeValeur, String a_operateur) {
+        String result = "Erreur sur l'operation";
+        try {
+                switch(a_operateur){
+                case Constantes.ADD_KEY:
+                	result = this.addition(a_premiereValeur, a_deuxiemeValeur);
+                	break;
+                case Constantes.SUB_KEY:
+                	result = this.soustraction(a_premiereValeur, a_deuxiemeValeur);
+                	break;
+                case Constantes.MUL_KEY:
+                	result = this.multiplication(a_premiereValeur, a_deuxiemeValeur);
+                	break;
+                default:
+                	result = "Erreur sur l'operation";
+                	break;
+                }
+        } catch (NumberFormatException exp) {
+        	result = "Erreur : Une des saisies n'a pas le type attendu.";
+        }
+        return result;
+    }
 
 
 }

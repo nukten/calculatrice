@@ -35,6 +35,6 @@ public interface ICalculatrice {
      * @param operateur l operateur de l operation
      * @return Le resultat
      */
-    public String calcul(String premiereValeur, String deuxiemeValeur);
+    public String calcul(String premiereValeur, String deuxiemeValeur, String operateur);
 
 }
