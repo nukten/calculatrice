@@ -1,34 +1,36 @@
 package calculatrice;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
 	/**
-	 * Fonction de demarrage du programme
+	 * Fonction de démarrage du programme
 	 */
     public static void main(String[] args) {
 
 		ICalculatrice vCalculator = new Calculatrice();
-		ArrayList<String> HistoList = new ArrayList<String>();
+		ArrayList<String> histoList = new ArrayList<String>();
 		Scanner sc = new Scanner(System.in);
 		boolean estCalculable = true;
 		String premiereValeur = null;
 		String deuxiemeValeur = null;
 		String resultat = null;
 		String calcul = null;
+		Fichier fichier = new Fichier();
 
 		do {
 			calcul = null;
 			premiereValeur = null;
 			deuxiemeValeur = null;
 			resultat = null;
-			System.out.println("Choissisez l'operation (+/-/*) ou q pour quitter ! ");
+			System.out.println("Choissisez l'opÃ©ration (+/-/*), h pour l'historique ou q pour quitter ! ");
 			String operation = sc.nextLine();
 
 			switch (operation) {
 			case Constantes.QUIT_APPLI:
-				System.out.println("Arrêt de la calculatrice");
+				System.out.println("ArrÃªt de la calculatrice");
 				System.exit(0);
 				break;
 
@@ -42,7 +44,7 @@ public class Application {
 
 				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
 					resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
-					System.out.println("Le résultat est : ");
+					System.out.println("Le rÃ©sultat est : ");
 					System.out.println(resultat);
 				} else {
 					System.out.println("erreur dans la saisie");
@@ -58,20 +60,16 @@ public class Application {
 
 				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
 					resultat = vCalculator.soustraction(premiereValeur, deuxiemeValeur);
-					System.out.println("Le résultat est : ");
+					System.out.println("Le rÃ©sultat est : ");
 					System.out.println(resultat);
 				} else {
 					System.out.println("erreur dans la saisie");
 				}
+				break;
 
 			case Constantes.HISTO:
-				if(HistoList.size() > 0) {
-					for(int i = 0; i < HistoList.size(); i++) {
-						System.out.println(HistoList.get(i));
-					}
-				}else {
-					System.out.println("La liste est vide");
-				}
+				resultat = Constantes.EMPTY;
+				fichier.lecture();
 				break;
 			case Constantes.MUL_KEY:
 				System.out.println("Valeur 1 : ");
@@ -82,23 +80,24 @@ public class Application {
 
 				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
 					resultat = vCalculator.multiplication(premiereValeur, deuxiemeValeur);
-					System.out.println("Le résultat est : ");
+					System.out.println("Le rÃ©sultat est : ");
 					System.out.println(resultat);
 				} else {
 					System.out.println("erreur dans la saisie");
 				}
+
 				break;
 
 			default:
-				System.out.println("operation non disponible");
+				System.out.println("opération non disponible");
 				break;
 
 			}
 			calcul = premiereValeur + " " + operation + " " + deuxiemeValeur + " = "+resultat;
-			if( (calcul != null) & (operation != null) & (premiereValeur != null) & (deuxiemeValeur != null) ) {
-				HistoList.add(calcul);
+			if((calcul != null) & (operation != null & operation != Constantes.HISTO) & (premiereValeur != null) & (deuxiemeValeur != null) & (!resultat.contains(" "))) {
+				histoList.add(calcul);
+				fichier.ecritureApplication(histoList);
 			}
 		} while (estCalculable);
-
 	}
 }
