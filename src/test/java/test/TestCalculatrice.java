@@ -628,25 +628,23 @@ public class TestCalculatrice {
      * Méthode qui permet de tester la methode operation.
      * test addition avec une valeur negative
      */
-    /*
+
     @Test
     public void testOperation7() {
         result = montest.calcul("-1", "1", Constantes.ADD_KEY);
-        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+        Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0.");
     }
-    */
+
     /**
      * Méthode qui permet de tester la methode operation.
      * test addition avec une valeur negative
      */
 
-    /*
     @Test
     public void testOperation8() {
         result = montest.calcul("1", "-1", Constantes.ADD_KEY);
-        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+        Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0.");
     }
-    */
 
     /**
      * Méthode qui permet de tester la methode operation.
@@ -672,35 +670,30 @@ public class TestCalculatrice {
      * Méthode qui permet de tester la methode operation.
      * test addition avec des caracteres
      */
-    /*
+
     @Test
     public void testOperation11() {
         result = montest.calcul("1", "22", "CoucouTuVeuxVoirMa");
-        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+        Assert.assertEquals(result, "Erreur sur l'operation");
     }
-    */
+
     /**
      * Méthode qui permet de tester la methode operation.
      * test addition avec des caracteres
      */
-
-    /*
     @Test
-
     public void testOperation12() {
         result = montest.calcul("1", "22", "123");
-        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+        Assert.assertEquals(result, "Erreur sur l'operation");
     }
-     */
     /**
      * Méthode qui permet de tester la methode operation.
      * test addition avec des caracteres
      */
 
-    /*
     @Test
     public void testOperation13() {
         result = montest.calcul("1", "33", "-");
-        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
-    }*/
+        Assert.assertEquals(result, "Erreur sur l'operation");
+    }
 }
