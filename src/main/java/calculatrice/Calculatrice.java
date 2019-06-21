@@ -20,7 +20,7 @@ public class Calculatrice implements ICalculatrice {
 		} catch (NumberFormatException e) {
 			return "Erreur : Une des saisies n'a pas le type attendu.";
 		}
-	}
+	}//
 
 	/**
 	 * Méthode qui permet la soustraction de deux nombres

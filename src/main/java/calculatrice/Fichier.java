@@ -17,7 +17,8 @@ import java.nio.file.Paths;
 
 public class Fichier {
 
-	File f = new File("C:/Users/thomas/Documents/GitHub/calculatrice/monFichier.txt");
+
+	File f = new File("./monFichier.txt");
 	String l_chaine = new String();
 
 	public void writer(ArrayList<String> l_histoList) throws IOException {
@@ -27,7 +28,9 @@ public class Fichier {
 				for (int i = 0; i < l_histoList.size(); i++) {
 					l_chaine+=l_histoList.get(i)+"\n";
 				}
-				Files.write(Paths.get("C:/Users/thomas/Documents/GitHub/calculatrice/monFichier.txt"),l_chaine.getBytes(), StandardOpenOption.APPEND);
+
+				Files.write(Paths.get("./monFichier.txt"),l_chaine.getBytes(), StandardOpenOption.APPEND);
+
 			} else {
 				System.out.println("La liste est vide");
 			}
