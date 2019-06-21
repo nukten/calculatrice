@@ -27,7 +27,6 @@ public class TestConstantes {
      */
     public void testAdd_key() {
         result = Constantes.ADD_KEY;
-        System.out.println(result);
         Assert.assertEquals("+", result);
 
     }
@@ -38,7 +37,6 @@ public class TestConstantes {
      */
     public void testEmpty() {
         result = Constantes.EMPTY;
-        System.out.println(result);
         Assert.assertEquals("", result);
 
     }
@@ -48,7 +46,6 @@ public class TestConstantes {
      */
     public void testFloat_separator() {
         result = Constantes.FLOAT_SEPARATOR;
-        System.out.println(result);
         Assert.assertEquals(".", result);
 
     }
@@ -58,7 +55,6 @@ public class TestConstantes {
      */
     public void testSub_key() {
         result = Constantes.SUB_KEY;
-        System.out.println(result);
         Assert.assertEquals("-", result);
 
     }
@@ -68,7 +64,6 @@ public class TestConstantes {
      */
     public void testDivide_key() {
         result = Constantes.DIVIDE_KEY;
-        System.out.println(result);
         Assert.assertEquals("/", result);
 
     }
@@ -78,7 +73,6 @@ public class TestConstantes {
      */
     public void testMul_key() {
         result = Constantes.MUL_KEY;
-        System.out.println(result);
         Assert.assertEquals("*", result);
 
     }

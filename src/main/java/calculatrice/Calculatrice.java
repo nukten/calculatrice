@@ -17,10 +17,10 @@ public class Calculatrice implements ICalculatrice {
             } else {
                 return "Erreur : Un nombre est inférieur à 0.";
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException exp) {
             return "Erreur : Une des saisies n'a pas le type attendu.";
         }
-    }//
+    }
 
     /**
      * Méthode qui permet la soustraction de deux nombres
@@ -38,7 +38,7 @@ public class Calculatrice implements ICalculatrice {
             } else {
                 return "Erreur : Un nombre est inférieur à 0.";
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException exp) {
             return "Erreur : Une des saisies n'a pas le type attendu.";
         }
     }
@@ -60,7 +60,7 @@ public class Calculatrice implements ICalculatrice {
             } else {
                 return "Erreur : Un nombre est inférieur à 0.";
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException exp) {
             return "Erreur : Une des saisies n'a pas le type attendu.";
         }
     }
