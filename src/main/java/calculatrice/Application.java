@@ -5,20 +5,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
-	/**
-	 * Fonction de démarrage du programme
-	 */
+    /**
+     * Fonction de démarrage du programme
+     */
     public static void main(String[] args) {
 
-		ICalculatrice vCalculator = new Calculatrice();
-		ArrayList<String> histoList = new ArrayList<String>();
-		Scanner sc = new Scanner(System.in);
-		boolean estCalculable = true;
-		String premiereValeur = null;
-		String deuxiemeValeur = null;
-		String resultat = null;
-		String calcul = null;
-		Fichier fichier = new Fichier();
+        ICalculatrice vCalculator = new Calculatrice();
+        ArrayList<String> histoList = new ArrayList<String>();
+        Scanner sc = new Scanner(System.in);
+        boolean estCalculable = true;
+        String premiereValeur = null;
+        String deuxiemeValeur = null;
+        String resultat = null;
+        String calcul = null;
+        Fichier fichier = new Fichier();
 
 		do {
 			calcul = null;
@@ -39,58 +39,58 @@ public class Application {
 				System.exit(0);
 				break;
 
-			case Constantes.ADD_KEY:
-				System.out.println("Valeur 1 : ");
-				premiereValeur = sc.nextLine();
-				System.out.println("Valeur 2: ");
-				deuxiemeValeur = sc.nextLine();
 
-				resultat = Constantes.EMPTY;
+            case Constantes.ADD_KEY:
+                System.out.println("Valeur 1 : ");
+                premiereValeur = sc.nextLine();
+                System.out.println("Valeur 2: ");
+                deuxiemeValeur = sc.nextLine();
 
-				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
-					resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
-					System.out.println("Le rÃ©sultat est : ");
-					System.out.println(resultat);
-				} else {
-					System.out.println("erreur dans la saisie");
-				}
-				break;
+                resultat = Constantes.EMPTY;
 
-			case Constantes.SUB_KEY:
-				System.out.println("Valeur 1 : ");
-				premiereValeur = sc.nextLine();
-				System.out.println("Valeur 2: ");
-				deuxiemeValeur = sc.nextLine();
-				resultat = Constantes.EMPTY;
+                if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
+                    resultat = vCalculator.addition(premiereValeur, deuxiemeValeur);
+                    System.out.println("Le résultat est : ");
+                    System.out.println(resultat);
+                } else {
+                    System.out.println("erreur dans la saisie");
+                }
+                break;
 
-				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
-					resultat = vCalculator.soustraction(premiereValeur, deuxiemeValeur);
-					System.out.println("Le rÃ©sultat est : ");
-					System.out.println(resultat);
-				} else {
-					System.out.println("erreur dans la saisie");
-				}
-				break;
+            case Constantes.SUB_KEY:
+                System.out.println("Valeur 1 : ");
+                premiereValeur = sc.nextLine();
+                System.out.println("Valeur 2: ");
+                deuxiemeValeur = sc.nextLine();
+                resultat = Constantes.EMPTY;
 
-			case Constantes.HISTO:
-				resultat = Constantes.EMPTY;
-				fichier.lecture();
-				break;
-			case Constantes.MUL_KEY:
-				System.out.println("Valeur 1 : ");
-				premiereValeur = sc.nextLine();
-				System.out.println("Valeur 2: ");
-				deuxiemeValeur = sc.nextLine();
-				resultat = Constantes.EMPTY;
+                if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
+                    resultat = vCalculator.soustraction(premiereValeur, deuxiemeValeur);
+                    System.out.println("Le résultat est : ");
+                    System.out.println(resultat);
+                } else {
+                    System.out.println("erreur dans la saisie");
+                }
+                break;
 
-				if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
-					resultat = vCalculator.multiplication(premiereValeur, deuxiemeValeur);
-					System.out.println("Le rÃ©sultat est : ");
-					System.out.println(resultat);
-				} else {
-					System.out.println("erreur dans la saisie");
-				}
+            case Constantes.HISTO:
+                resultat = Constantes.EMPTY;
+                fichier.lecture();
+                break;
+            case Constantes.MUL_KEY:
+                System.out.println("Valeur 1 : ");
+                premiereValeur = sc.nextLine();
+                System.out.println("Valeur 2: ");
+                deuxiemeValeur = sc.nextLine();
+                resultat = Constantes.EMPTY;
 
+                if (!premiereValeur.isEmpty() & !deuxiemeValeur.isEmpty()) {
+                    resultat = vCalculator.multiplication(premiereValeur, deuxiemeValeur);
+                    System.out.println("Le résultat est : ");
+                    System.out.println(resultat);
+                } else {
+                    System.out.println("erreur dans la saisie");
+                }
 				break;
 			case Constantes.PREC:
 				if(histoList.size() <= 0) {
@@ -162,4 +162,5 @@ public class Application {
 			}
 		} while (estCalculable);
 	}
+
 }
