@@ -24,6 +24,9 @@ public static final String EMPTY = "";
 
 	/** La cle pour l'historique */
 	public static final String HISTO = "h";
+	
+	/** La cle pour utiliser le résultat précédent */
+	public static final String PREC = "p";
 
 
 }
