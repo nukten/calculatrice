@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import calculatrice.Calculatrice;
+import calculatrice.Constantes;
 import calculatrice.ICalculatrice;
 
 public class TestCalculatrice {
@@ -400,6 +401,7 @@ public class TestCalculatrice {
         result = montest.multiplication("Azertty", "2");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test avec une valeur avec des caracteres et une normale
@@ -409,6 +411,7 @@ public class TestCalculatrice {
         result = montest.multiplication("2", "Azertty");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test avec une valeur avec des caracteres et une null
@@ -418,6 +421,7 @@ public class TestCalculatrice {
         result = montest.multiplication("", "Azertty");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test avec une valeur avec des caracteres et une null
@@ -427,6 +431,7 @@ public class TestCalculatrice {
         result = montest.multiplication("Azertty", "");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test avec une valeur avec des caracteres et une negative
@@ -436,6 +441,7 @@ public class TestCalculatrice {
         result = montest.multiplication("Azertty", "-33");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test avec une valeur avec des caracteres et une negative
@@ -445,6 +451,7 @@ public class TestCalculatrice {
         result = montest.multiplication("-33", "Azertty");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test avec deux valeurs negatives
@@ -454,6 +461,7 @@ public class TestCalculatrice {
         result = montest.multiplication("-33", "-33");
         Assert.assertEquals(result, "Erreur : Un nombre est inférieur à 0.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant une addition et une valeur normale
@@ -463,6 +471,7 @@ public class TestCalculatrice {
         result = montest.multiplication("3+3", "3");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant une operation et une valeur normale
@@ -472,6 +481,7 @@ public class TestCalculatrice {
         result = montest.multiplication("-3*-3", "2");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant operateur et un chiffre et une valeur normale
@@ -481,6 +491,7 @@ public class TestCalculatrice {
         result = montest.multiplication("*3", "2");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant operateur et un chiffre et une valeur normale
@@ -490,6 +501,7 @@ public class TestCalculatrice {
         result = montest.multiplication("2", "*3");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant une operation et une valeur normale
@@ -499,6 +511,7 @@ public class TestCalculatrice {
         result = montest.multiplication("3+3", "2");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant deux operateur + et une valeur normale
@@ -508,6 +521,7 @@ public class TestCalculatrice {
         result = montest.multiplication("++", "2");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur contenant une operation et une valeur normale
@@ -527,6 +541,7 @@ public class TestCalculatrice {
         result = montest.multiplication("2/1", "2/1");
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test des valeurs Float
@@ -536,6 +551,7 @@ public class TestCalculatrice {
         result = montest.multiplication("2.3", "2.2");
         Assert.assertEquals(result, "5.06");
     }
+
     /**
      * Méthode qui permet de tester la multiplication de deux nombres
      * test une valeur Float et une valeur avec des caracteres
@@ -546,4 +562,135 @@ public class TestCalculatrice {
         Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
     }
 
+//--------------------------------------------//
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec valeurs normales
+     */
+    @Test
+    public void testOperation1() {
+        result = montest.calcul("1", "1", Constantes.ADD_KEY);
+        Assert.assertEquals(result, "2.0");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test multiplication avec valeurs normales
+     */
+    @Test
+    public void testOperation2() {
+        result = montest.calcul("3", "4", Constantes.MUL_KEY);
+        Assert.assertEquals(result, "12.0");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test soustraction avec valeurs normales
+     */
+    @Test
+    public void testOperation3() {
+        result = montest.calcul("11", "1", Constantes.SUB_KEY);
+        Assert.assertEquals(result, "10.0");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec valeurs null
+     */
+    @Test
+    public void testOperation4() {
+        result = montest.calcul("", "", Constantes.ADD_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test multiplication avec une valeur null
+     */
+    @Test
+    public void testOperation5() {
+        result = montest.calcul("", "1", Constantes.MUL_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test soustraction avec une valeur null
+     */
+    @Test
+    public void testOperation6() {
+        result = montest.calcul("1", "", Constantes.SUB_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec une valeur negative
+     */
+    @Test
+    public void testOperation7() {
+        result = montest.calcul("-1", "1", Constantes.ADD_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec une valeur negative
+     */
+    @Test
+    public void testOperation8() {
+        result = montest.calcul("1", "-1", Constantes.ADD_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec des caracteres
+     */
+    @Test
+    public void testOperation9() {
+        result = montest.calcul("azerty", "10", Constantes.ADD_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec des caracteres
+     */
+    @Test
+    public void testOperation10() {
+        result = montest.calcul("1", "uiop", Constantes.ADD_KEY);
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec des caracteres
+     */
+    @Test
+    public void testOperation11() {
+        result = montest.calcul("1", "22", "CoucouTuVeuxVoirMa");
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec des caracteres
+     */
+    @Test
+    public void testOperation12() {
+        result = montest.calcul("1", "22", "123");
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
+
+    /**
+     * Méthode qui permet de tester la methode operation.
+     * test addition avec des caracteres
+     */
+    @Test
+    public void testOperation13() {
+        result = montest.calcul("1", "33", "-");
+        Assert.assertEquals(result, "Erreur : Une des saisies n'a pas le type attendu.");
+    }
 }

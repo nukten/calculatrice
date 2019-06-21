@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Application {
 
-	/** Valeur de la premiere saisie. */
+    /** Valeur de la premiere saisie. */
     public static String premiereValeur = null;
 
     /** Valeur de la deuxieme saisie. */
@@ -39,7 +39,7 @@ public class Application {
         Fichier fichier = new Fichier();
         sc = new Scanner(System.in);
         do {
-        	initVariables ();
+            initVariables ();
             System.out.println("Choissisez l'opération (+/-/*)");
             System.out.println("p et votre signe opératoire pour utiliser le résultat précédent");
             System.out.println("h pour l'historique" + "\n" + "q pour quitter");
@@ -93,11 +93,11 @@ public class Application {
                                     case Constantes.ADD_KEY:
                                     case Constantes.MUL_KEY:
                                     case Constantes.SUB_KEY:
-                                    	resultat = vcalculator.calcul(premiereValeur, deuxiemeValeur, operation2);
+                                        resultat = vcalculator.calcul(premiereValeur, deuxiemeValeur, operation2);
                                         System.out.println("Le résultat est : ");
                                         System.out.println(resultat);
                                         operation = operation2;
-                                    	break;
+                                        break;
                                     default:
                                         System.out.println("Erreur d'opérateur lors de la récupération du résultat précédent");
                                         initVariables ();
@@ -133,7 +133,7 @@ public class Application {
      * @return la saisie du clavier
      */
     public static String inputChecker() {
-    	return sc.nextLine();
+        return sc.nextLine();
     }
 
     /**
