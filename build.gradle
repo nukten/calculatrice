@@ -12,7 +12,7 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
-apply plugin: 'jdepend'
+//apply plugin: 'jdepend'
 
 
 
@@ -49,5 +49,17 @@ pmd {
     toolVersion = '5.1.3'
 	ruleSetConfig = rootProject.resources.text.fromFile('config/pmd/ruleset.xml')
 	ignoreFailures = true
+}
+
+cpd {
+    toolVersion = '5.1.3'
+}
+
+tasks.cpd {
+    reports {
+        text.enabled = true
+        xml.enabled = true
+    }
+    source = files('src')
 }
 
