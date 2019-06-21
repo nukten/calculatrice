@@ -54,7 +54,7 @@ pmd {
     toolVersion = '5.1.3'
   ruleSetConfig = rootProject.resources.text.fromFile('config/pmd/ruleset.xml')
   ignoreFailures = true
-  pmdTest.enabled = false
+  //pmdTest.enabled = false
 }
 
 
