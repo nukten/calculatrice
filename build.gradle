@@ -65,6 +65,12 @@ check << {
         fileset(dir: "src/main/java") {
             include(name: '**/*.java')
         }
+		
+	ant.cpd(minimumTokenCount: '100', format: 'xml', 
+        outputFile: new File(outDir , 'cpd.xml')) {
+        fileset(dir: "src/main/java") {
+            include(name: '**/*.java')
+        }
     }
 }
 
